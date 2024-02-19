@@ -1,0 +1,22 @@
+package class2;
+
+import java.util.Scanner;
+import java.InetAddress;
+import java.UnknownHostException;
+
+public class HostnameResolver {
+    public static void(String[]args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a hostname: ");
+        String hostname = scanner.nextline();
+
+        try {
+            InetAddress address = InetAddress.getByName(hostname);
+            System.out.println("IP Address: "+ address.getHostAddress());
+        } catch (UnknownException e) {
+            System.out.println("Could not find IP Address for:" + hostname);
+        }
+
+    }
+}
